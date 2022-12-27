@@ -1,0 +1,6 @@
+export { default } from '@mui/base/SnackbarUnstyled/SnackbarUnstyled';
+export * from '@mui/base/SnackbarUnstyled/SnackbarUnstyled.types';
+export { default as snackbarUnstyledClasses } from '@mui/base/SnackbarUnstyled/snackbarUnstyledClasses';
+export * from '@mui/base/SnackbarUnstyled/snackbarUnstyledClasses';
+export { default as useSnackbar } from '@mui/base/SnackbarUnstyled/useSnackbar';
+export * from '@mui/base/SnackbarUnstyled/useSnackbar.types';
