@@ -63,7 +63,7 @@
     
     </details>
 
-        <details>
+    <details>
     <summary>What's the difference between Array and Linked Map?</summary>
 
     | Array | Map |
@@ -123,4 +123,3 @@
     - Lock:
     - Deadlock:
 - Race condition: 
-    
