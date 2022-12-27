@@ -1,10 +1,8 @@
 # Data structure and Algothrims
 
-## Data structure 
-
-### Array (Static Data Structure)
-
-- Array: is a single var that is used to store different elements
+### Data structure 
+- Array (Static Data Structure)
+    - Array: is a single var that is used to store different elements
     - It is often used when we want to store a list of elements and access them by a single variable.
     - Advantages and Disavantages an Array:
         - Advantages: 
@@ -54,22 +52,75 @@
             - A set takes O(logN) time complexity for basic operations like insertion and deletion.
 
     <details>
+
     <summary>What's the difference between Array and Linked List?</summary>
 
     | Array | Linked List |
     |-----:|-----------|
-    |     An array is a collection of elements of a similar data type. | A linked list is a collection of objects known as a node where node consists of two parts, i.e., data and address.|
-    |     Array elements store in a contiguous memory location. | Linked list elements can be stored anywhere in the memory or randomly stored.   |
+    |An array is a collection of elements of a similar data type. |A linked list is a collection of objects known as a node where node consists of two parts, i.e., data and address.|
+    |Array elements store in a contiguous memory location. |Linked list elements can be stored anywhere in the memory or randomly stored. |
   
     
     </details>
 
-- What's the difference between Array and Map?
-    - An Array is a collection of elements of the same data type.	
-    The map is a hashed structure of key and value pairs.
-The indices of the list are integers starting from 0.	
-The keys of the Map can be of any data type.
-The elements are accessed via indices.
-	The elements are accessed via key-values.
+        <details>
+    <summary>What's the difference between Array and Linked Map?</summary>
 
-- What's the difference between Array and Set?
+    | Array | Map |
+    |-----:|-----------|
+    |An Array is a collection of elements of the same data type.|The map is a hashed structure of key and value pairs.|
+    |Array elements store in a contiguous memory location. |The indices of the list are integers starting from 0.|
+    ||The keys of the Map can be of any data type.|
+    
+    </details>
+
+    <sumary>What's the difference between Array and Set?</sumary>
+
+     | Array | Set |
+    |-----:|-----------|
+    |An ordered, random-access collection|An unordered collection of unique elements.|
+
+    </detail>
+
+### Algorithms
+
+- Algorithms complexity: O(n^2)
+    - Algorimths complexity: Algorithm complexity is an input dependent function. 
+    - Time complexity is defined as the amount of time taken by an algorithm to run, as a function of the length of the input. It measures the time taken to execute each statement of code in an algorithm.
+- Sort
+    - QuickSort: The algorithm will select an element in the array to be a marker called pivot. After selecting the marker, it splits the array into two subarrays by comparing with the selected pivot. One array will include elements less than or equal to pivot and the other array is always greater than or equal to pivot.
+    - Exam:
+    ![alt text](https://wiki.tino.org/wp-content/uploads/2021/07/word-image-1266.png)
+
+    </details>
+
+    <sumary>Application Algorithms Quicksort</sumary>
+
+    - Commercial Calculator: Used in government and private organizations for various data classification purposes such as sorting accounts/records by name or by ID, classifying transactions by time or location , sort files by name or creation date, etc.
+    - Numerical computation: Most efficiently developed algorithms use priority queues and inturn sort to achieve accuracy in all calculations.
+    - Information search: Sorting algorithm makes searching for information faster and more efficient
+
+    </detail>
+    
+
+- Search
+    - LinearSearch (complexity: O(n)): Linear Search is defined as a sequential search algorithm that starts at one end and goes through each element of a list until the desired element is found, otherwise the search continues till the end of the data set. It is the easiest searching algorithm
+        - Exam:
+
+        ![alt text](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Linear-Search.png)
+
+### Programming
+- Data Type
+    - Primitive Type: Are a set of basic data types from which all other data types are constructed
+        - Exam: Numbers, String, Boolean, v.v
+    - Reference Type: Reference data types, unlike primitive data types, are dynamic in nature. That is, they do not have a fixed size.
+        - Exam: Object, Functions, Collections, Arrays, v.v
+- Compiler
+    - Compiler:
+    - Why compiler needed
+- Thread: 
+- Lock and Deadlock
+    - Lock:
+    - Deadlock:
+- Race condition: 
+    
