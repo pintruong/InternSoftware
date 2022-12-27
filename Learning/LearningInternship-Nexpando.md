@@ -13,5 +13,7 @@
 
 - Linked List
     - Linked List: is a collection of nodes that are linked together. The following node contains the link to the previous node
+
+        Exam:
     
-    Exam: ![alt text](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png)
+     ![alt text](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png)
