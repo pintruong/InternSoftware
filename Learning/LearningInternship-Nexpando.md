@@ -74,6 +74,8 @@
     
     </details>
 
+    <details>
+
     <sumary>What's the difference between Array and Set?</sumary>
 
      | Array | Set |
