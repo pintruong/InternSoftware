@@ -107,11 +107,68 @@ export class UsersController {
                 },
             },
         })
-        product: Omit<Users, 'productId'>,
+        user: Omit<Users, 'id'>,
     ): Promise<Users> {
 
-        return this.usersRepository.create(product);
+        return this.usersRepository.create(user);
 
+    }
+
+    @put('/users/{id}', {
+        responses: {
+            '204': {
+                description: 'Users PUT success',
+            },
+        },
+    })
+    async replaceById(
+        @param.path.number('id') id: number,
+        @requestBody() user: Users,
+    ): Promise<void> {
+        await this.usersRepository.replaceById(id, user);
+    }
+
+    @patch('/users/{id}', {
+        responses: {
+            '204': {
+                description: 'Users PATCH success',
+            },  
+        },
+    })
+    async updateById(
+        @param.path.number('id') id: number,
+        @requestBody({
+            content: {
+                'application/json': {
+                    schema: getModelSchemaRef(Users, { partial: true }),
+                },
+            },
+        })
+        user: Users,
+    ): Promise<void> {
+        await this.usersRepository.updateById(id, user);
+    }
+
+    @patch('/users', {
+        responses: {
+            '200': {
+                description: 'Users PATCH success count',
+                content: { 'application/json': { schema: CountSchema } },
+            },
+        },
+    })
+    async updateAll(
+        @requestBody({
+            content: {
+                'application/json': {
+                    schema: getModelSchemaRef(Users, { partial: true }),
+                },
+            },
+        })
+        user: Users,
+        @param.where(Users) where?: Where<Users>,
+    ): Promise<Count> {
+        return this.usersRepository.updateAll(user, where);
     }
 
 }
