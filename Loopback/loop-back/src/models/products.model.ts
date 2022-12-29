@@ -6,13 +6,13 @@ import { Entity, model, property } from '@loopback/repository';
 export class Products extends Entity {
   @property({
     type: 'number',
-    required: true,
+    // required: true,
     scale: 0,
     // generated: ,
     id: 1,
-    postgresql: { columnName: 'product_id', dataType: 'integer', dataLength: null, dataPrecision: null, dataScale: 0, nullable: 'NO', generated: undefined },
+    postgresql: { columnName: 'id', dataType: 'integer', dataLength: null, dataPrecision: null, dataScale: 0, nullable: 'NO', generated: undefined },
   })
-  productId: number;
+  id: number;
 
   @property({
     type: 'number',

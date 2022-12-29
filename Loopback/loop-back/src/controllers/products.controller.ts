@@ -12,7 +12,7 @@ export class ProductsController {
     @get('/products', {
         responses: {
             '200': {
-                description: 'Array of Users model instances',
+                description: 'Array of Products model instances',
                 content: {
                     'application/json': {
                         schema: {
@@ -28,10 +28,40 @@ export class ProductsController {
         return this.ProductsRepository.find(filter)
     }
 
+    @get('/products/count', {
+        responses: {
+            '200': {
+                description: 'Products model count',
+                content: { 'application/json': { schema: CountSchema } },
+            },
+        },
+    })
+    async count(@param.where(Products) where?: Where<Products>): Promise<Count> {
+        return this.ProductsRepository.count(where);
+    }
+    @get('/products/{id}', {
+        responses: {
+            '200': {
+                description: 'Products model instance',
+                content: {
+                    'application/json': {
+                        schema: getModelSchemaRef(Products, { includeRelations: true }),
+                    },
+                },
+            },
+        },
+    })
+    async findById(
+        @param.path.number('id') id: number,
+        @param.filter(Products, { exclude: 'where' }) filter?: FilterExcludingWhere<Products>,
+    ): Promise<Products> {
+        return this.ProductsRepository.findById(id, filter);
+    }
+
     @post('/products', {
         responses: {
             '200': {
-                description: 'Users model instance',
+                description: 'Products model instance',
                 content: { 'application/json': { schema: getModelSchemaRef(Products) } },
             },
         },
@@ -41,7 +71,7 @@ export class ProductsController {
             content: {
                 'application/json': {
                     schema: getModelSchemaRef(Products, {
-                        title: 'NewUsers',
+                        title: 'NewProducts',
                         exclude: ['productId'],
                     }),
                 },
@@ -51,5 +81,33 @@ export class ProductsController {
     ): Promise<Products> {
 
         return this.ProductsRepository.create(product);
+
+    }
+
+    @del('/products/{id}', {
+        responses: {
+            '204': {
+                description: 'Products DELETE success',
+            },
+        },
+    })
+    async deleteById(@param.path.number('id') id: number): Promise<void> {
+        await this.ProductsRepository.deleteById(id);
+    }
+
+
+    @put('/products/{id}', {
+        responses: {
+            '204': {
+                description: 'Products PUT success',
+            },
+        },
+    })
+    async replaceById(
+        @param.path.number('id') id: number,
+        @requestBody() Users: Products,
+    ): Promise<void> {
+        await this.ProductsRepository.replaceById(id, Users);
     }
 }
+

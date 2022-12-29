@@ -78,7 +78,7 @@
 
     <sumary>What's the difference between Array and Set?</sumary>
 
-     | Array | Set |
+    | Array | Set |
     |-----:|-----------|
     |An ordered, random-access collection|An unordered collection of unique elements.|
 
@@ -125,3 +125,5 @@
     - Lock:
     - Deadlock:
 - Race condition: 
+
+- Data Management System: A database is a collection of connected information about people, locations, or things. A database management system (DBMS) is a collection of programs that allow you to create, manage, and operate a database.
